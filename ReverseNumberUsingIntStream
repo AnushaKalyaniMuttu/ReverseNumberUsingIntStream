@@ -1,0 +1,19 @@
+package com.bean;
+
+import java.util.stream.IntStream;
+
+public class Test {
+    
+
+		    public static void main(String[] args) {
+		    	Integer value=12345;
+		Integer reversed=    IntStream.iterate(value, n->n/10)
+		    .limit(String.valueOf(value).length())
+		    .map(n->n%10)
+		    .reduce(0,(result,mid)->result*10+mid);
+		    System.out.println(reversed);
+		    }
+		    
+	
+	
+}
